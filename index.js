@@ -5,3 +5,15 @@ http.createServer(function(request, response) {
     response.end('Hi there\n')
 }).listen(process.env.PORT);
 
+var express = require('express');
+
+var app = express();
+var port = 9000;
+
+app.get('/', function(request, response) {
+    response.send('Hi there.');
+});
+
+app.listen(port, function(err){
+    console.log('Running server on port ' + port);
+});
