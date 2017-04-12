@@ -11,6 +11,9 @@
     "nodejs",
     "crud"
   ],
-  "author": "williamjohnsonjr",
-  "license": "MIT"
+  "author": "WilliamJohnsonJr - https://github.com/williamjohnsonjr",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
