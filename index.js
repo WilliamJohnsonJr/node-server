@@ -8,16 +8,12 @@
 var express = require('express');
 
 var app = express();
-var port = int(process.env.PORT) || 9000;
+var port = process.env.PORT || 9000;
 
 app.get('/', function(request, response) {
     response.send('Hi there.');
 });
 
-function int(str) {
-  if (!str) return 0;
-  return parseInt(str, 10);
-}
-// app.listen(port, function(err){
-//     console.log('Running server on port ' + port);
-// });
+app.listen(port, function(err){
+    console.log('Running server on port ' + port);
+});
