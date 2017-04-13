@@ -14,6 +14,10 @@ app.get('/', function(request, response) {
     response.send('Hi there.');
 });
 
+function int(str) {
+  if (!str) return 0;
+  return parseInt(str, 10);
+}
 // app.listen(port, function(err){
 //     console.log('Running server on port ' + port);
 // });
