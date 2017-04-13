@@ -1,19 +1,15 @@
-// var http = require('http');
-
-// http.createServer(function(request, response) {
-//     response.writeHead(200, {'Content-Type': 'text/plain'})
-//     response.end('Hi there\n')
-// }).listen(process.env.PORT);
-
 var express = require('express');
 
 var app = express();
 var port = process.env.PORT || 9000;
+var nav = [{
+    Link: '/',
+    Text: 'Home'
+}]
+var homeRouter = require ('./routes/routes')(nav);
 
-app.get('/', function(request, response) {
-    response.send('Hi there.');
-});
+app.use('/', homeRouter);
 
 app.listen(port, function(err){
-    console.log('Running server on port ' + port);
+    console.log('Listening on port ' + port);
 });
