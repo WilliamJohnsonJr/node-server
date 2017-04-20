@@ -14,11 +14,13 @@
   ],
   "author": "WilliamJohnsonJr - https://github.com/williamjohnsonjr",
   "repository": {
-  "type": "git",
-  "url": "git://github.com/WilliamJohnsonJr/node-server"
+    "type": "git",
+    "url": "git://github.com/WilliamJohnsonJr/node-server"
   },
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "sequelize": "^3.30.4",
+    "umzug": "^1.11.0"
   }
 }
