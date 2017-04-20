@@ -2,20 +2,10 @@ var express = require('express');
 
 var app = express();
 var port = process.env.PORT || 9000;
-var sequelize = new Sequelize('database', 'username', 'password', {
-  host: 'localhost',
-  dialect: 'mysql'|'sqlite'|'postgres'|'mssql',
-  pool: {
-    max: 5,
-    min: 0,
-    idle: 10000
-  },
-});
+var secrets = require('./secrets');
+var Sequelize = require('sequelize');
 
-var dbAccessString = require('./secrets');
-
-// Or you can simply use a connection uri
-var sequelize = new Sequelize(dbAccessString);
+var sequelize = new Sequelize(secrets.dbConnection);
 
 sequelize
   .authenticate()
